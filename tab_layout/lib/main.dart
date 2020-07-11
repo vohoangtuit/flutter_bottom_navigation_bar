@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:tab_layout/custom_views/widget/normal_button.dart';
+import 'package:tab_layout/modules/bottom_screen.dart';
+
+import 'modules/top_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Tab layout',
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Tab Layout'),
       debugShowCheckedModeBanner: false,
     );
   }
@@ -40,12 +44,18 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'Top',
+            NormalButton(
+             title: 'Top Screen',
+              onPressed: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (_)=>TopScreen()));
+              },
             ),
-            Text(
-              'Bottom',
-              style: Theme.of(context).textTheme.headline4,
+            SizedBox(height: 30,),
+            NormalButton(
+              title: 'Bottom Screen',
+              onPressed: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (_)=>BottomScreen()));
+              },
             ),
           ],
         ),
