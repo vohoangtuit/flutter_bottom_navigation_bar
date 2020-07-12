@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tab_layout/custom_views/widget/normal_button.dart';
-import 'package:tab_layout/modules/bottom_screen.dart';
+import 'package:tab_layout/modules/bottom_tab_main.dart';
 
 import 'modules/top_screen.dart';
 
