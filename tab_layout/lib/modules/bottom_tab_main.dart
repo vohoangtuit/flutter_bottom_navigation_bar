@@ -79,7 +79,9 @@ class _BottomWidgetState extends State<BottomWidget> {
             currentPage =tabScreen[currentIndex];
           });
         },
-       // selectedItemColor: Colors.amber[800],// change color tab on active
+        backgroundColor: Colors.grey,
+        selectedItemColor: Colors.blue,
+        unselectedItemColor: Colors.white,
       ),
       body: currentPage,
     );

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:tab_layout/custom_views/widget/normal_button.dart';
 import 'package:tab_layout/modules/bottom_tab_main.dart';
+import 'package:tab_layout/modules/bottom_tab_main_slider.dart';
 
-import 'modules/top_screen.dart';
+import 'modules/top_tab_screen_main.dart';
 
 void main() {
   runApp(MyApp());
@@ -55,6 +56,13 @@ class _MyHomePageState extends State<MyHomePage> {
               title: 'Bottom Screen',
               onPressed: (){
                 Navigator.of(context).push(MaterialPageRoute(builder: (_)=>BottomScreen()));
+              },
+            ),
+            SizedBox(height: 30,),
+            NormalButton(
+              title: 'Bottom Screen With Slider ',
+              onPressed: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (_)=>BottomSliderScreen()));
               },
             ),
           ],
