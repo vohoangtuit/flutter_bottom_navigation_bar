@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class Home extends StatelessWidget {
+class BusinessTap extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-         children:  [
-           Text("Home Screen"),
-         ],
+          children:  [
+            Text("Business Screen"),
+          ],
         ),
       ),
     );

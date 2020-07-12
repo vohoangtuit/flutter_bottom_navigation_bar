@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class School extends StatelessWidget {
+class ProfileTap extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -8,7 +8,7 @@ class School extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children:  [
-            Text("School Screen"),
+            Text("Profile Screen"),
           ],
         ),
       ),

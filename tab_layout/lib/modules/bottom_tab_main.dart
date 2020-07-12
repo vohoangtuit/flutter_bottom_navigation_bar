@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:tab_layout/modules/page/business.dart';
-import 'package:tab_layout/modules/page/home.dart';
-import 'package:tab_layout/modules/page/profile.dart';
-import 'package:tab_layout/modules/page/school.dart';
+import 'package:tab_layout/modules/taps/business_tap.dart';
+import 'package:tab_layout/modules/taps/home_tap.dart';
+import 'package:tab_layout/modules/taps/profile_tap.dart';
+import 'package:tab_layout/modules/taps/school_tap.dart';
 
 /// This Widget is the main application widget.
 class BottomScreen extends StatelessWidget {
@@ -48,10 +48,10 @@ class _BottomWidgetState extends State<BottomWidget> {
 
   ];
   final List tabScreen=[
-    Home(),
-    Business(),
-    School(),
-    Profile(),
+    HomeTap(),
+    BusinessTap(),
+    SchoolTap(),
+    ProfileTap(),
   ];
 
   int currentIndex=0;
