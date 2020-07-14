@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
-class SchoolTap extends StatelessWidget {
+class SchoolTap extends StatefulWidget {
+  @override
+  _SchoolTapState createState() => _SchoolTapState();
+}
+
+class _SchoolTapState extends State<SchoolTap> with AutomaticKeepAliveClientMixin<SchoolTap>  {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,4 +23,8 @@ class SchoolTap extends StatelessWidget {
       ),
     );
   }
+
+  @override
+  // TODO: implement wantKeepAlive
+  bool get wantKeepAlive => true;
 }

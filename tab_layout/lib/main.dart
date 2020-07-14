@@ -4,6 +4,7 @@ import 'package:tab_layout/modules/bottom_tab_main.dart';
 import 'package:tab_layout/modules/bottom_tab_main_slider.dart';
 
 import 'modules/top_tab_screen_main.dart';
+import 'modules/top_tab_screen_main_slider.dart';
 
 void main() {
   runApp(MyApp());
@@ -46,7 +47,14 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             NormalButton(
-             title: 'Top Screen',
+             title: 'Top Screen with slider',
+              onPressed: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (_)=>TopScreenWithSlider()));
+              },
+            ),
+            SizedBox(height: 30,),
+            NormalButton(
+              title: 'Top Screen ',
               onPressed: (){
                 Navigator.of(context).push(MaterialPageRoute(builder: (_)=>TopScreen()));
               },

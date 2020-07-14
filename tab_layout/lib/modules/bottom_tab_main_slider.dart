@@ -40,7 +40,28 @@ class _BottomSliderWidgetState extends State<BottomSliderWidget> {
            title: Text('Business')
        ),
        BottomNavigationBarItem(
-           icon: Icon(Icons.school),
+          // icon: Icon(Icons.school),
+           icon: new Stack(
+             overflow: Overflow.visible,
+             children: <Widget>[
+               const Icon(Icons.school),
+               new Positioned(
+                 top: -1.0,
+                 right: -6.0,
+                 child: new Container(
+                   decoration: new BoxDecoration(
+                       borderRadius: new BorderRadius.circular(8.0), color: Colors.red),
+                   width: 16.0,
+                   child: Center(
+                     child: new Text(
+                       "10",
+                       style: const TextStyle(color: Colors.white),
+                     ),
+                   ),
+                 ),
+               )
+             ],
+           ),
            title: Text('School')
        ),
        BottomNavigationBarItem(

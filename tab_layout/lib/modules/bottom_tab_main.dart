@@ -1,10 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tab_layout/modules/taps/business_tap.dart';
 import 'package:tab_layout/modules/taps/home_tap.dart';
 import 'package:tab_layout/modules/taps/profile_tap.dart';
 import 'package:tab_layout/modules/taps/school_tap.dart';
-
+import 'package:bottom_navigation_badge/bottom_navigation_badge.dart';
 /// This Widget is the main application widget.
 class BottomScreen extends StatelessWidget {
   static const String _title = 'Flutter Code Sample';
@@ -28,9 +27,9 @@ class BottomWidget extends StatefulWidget {
 }
 
 class _BottomWidgetState extends State<BottomWidget> {
-  final List<BottomNavigationBarItem> bottomTab =[
+  List<BottomNavigationBarItem> bottomTab =[
     BottomNavigationBarItem(
-        icon: Icon(CupertinoIcons.home),
+        icon: Icon(Icons.home),
         title: Text('Home')
     ),
     BottomNavigationBarItem(
@@ -38,7 +37,29 @@ class _BottomWidgetState extends State<BottomWidget> {
         title: Text('Business')
     ),
     BottomNavigationBarItem(
-        icon: Icon(Icons.school),
+        //icon: Icon(Icons.school),
+        icon: new Stack(
+          overflow: Overflow.visible,
+          children: <Widget>[
+            const Icon(Icons.school),
+            new Positioned(
+                top: -1.0,
+                right: -6.0,
+                  child: new Container(
+                    decoration: new BoxDecoration(
+                        borderRadius: new BorderRadius.circular(8.0), color: Colors.red),
+                    width: 16.0,
+                    child: Center(
+                      child: new Text(
+                        "10",
+                        style: const TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ),
+                )
+          ],
+        ),
+
         title: Text('School')
     ),
     BottomNavigationBarItem(
@@ -47,6 +68,7 @@ class _BottomWidgetState extends State<BottomWidget> {
     ),
 
   ];
+
   final List tabScreen=[
     HomeTap(),
     BusinessTap(),

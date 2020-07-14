@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
-class HomeTap extends StatelessWidget {
+class HomeTap extends StatefulWidget {
+  @override
+  _HomeTapState createState() => _HomeTapState();
+}
+
+class _HomeTapState extends State<HomeTap> with AutomaticKeepAliveClientMixin<HomeTap> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,4 +23,8 @@ class HomeTap extends StatelessWidget {
       ),
     );
   }
+
+  @override
+  // TODO: implement wantKeepAlive
+  bool get wantKeepAlive => true;
 }
